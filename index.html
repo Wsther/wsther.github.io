@@ -7,10 +7,18 @@
     <h1>Hi!</h1>
     <p>You have reached my Github website! This is still a work in progress. For now, you can click this!</p>
     <button onclick="Meow()">Click here!</button>
+    <p id="meowSpace"></p>
     <script>
-function Meow() {
-  
-}
-</script>
+      let meowed = false;
+      function Meow() {
+        if(!meowed){
+          document.getElementById("meowSpace").innerHTML = "Meow";
+          meowed = !m;
+        }
+        else{
+          document.getElementById("meowSpace").innerHTML = "";
+          meowed = !m;
+      }
+    </script>
   </body>
 </html>
