@@ -8,14 +8,14 @@
     <h1>Hi!</h1>
     <p>You have reached my Github website! This is still a work in progress. For now, you can click this!</p>
     <button onclick="Meow()">Click here!</button> <br>
-    <button onclick="MeowFlow()">Or click here!</button>
-    <p id="meowSpace"></p> <br>
+    <button onclick="MeowFlow()" id="meowFlow">Or click here!</button>
+    <p id="meowSpace"></p> 
     <p id="meowSpace2"></p>
     <script>
       let meowed = false;
       function Meow() {
         if(!meowed){
-          document.getElementById("meowSpace").innerHTML = "Meow";
+          document.getElementById("meowSpace").innerHTML = "Meow<br>";
           meowed = !meowed;
         }
         else{
@@ -24,11 +24,13 @@
         }
       }
       function MeowFlow(){
+        document.getElementById("meowFlow").disabled = true; 
         new TypeIt("#meowSpace2", {
-        strings: "Meow meow meow",
+        strings: "Meow meow meow<br>",
         speed: 50,
         waitUntilVisible: true,
         }).go();
+        document.getElementById("meowFlow").disabled = false; 
       }
     </script>
   </body>
