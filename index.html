@@ -10,7 +10,6 @@
     <button onclick="Meow()">Click here!</button> <br>
     <button onclick="MeowFlow()" id="meowFlow">Or click here!</button>
     <p id="meowSpace"></p> 
-    <p id="meowSpace2"></p>
     <script>
       let meowed = false;
       function Meow() {
@@ -25,10 +24,11 @@
       }
       function MeowFlow(){
         document.getElementById("meowFlow").disabled = true; 
-        new TypeIt("#meowSpace2", {
+        new TypeIt("#meowSpace", {
         strings: "Meow meow meow<br>",
         speed: 50,
         waitUntilVisible: true,
+        .pause(1000)
         }).go();
         document.getElementById("meowFlow").disabled = false; 
       }
